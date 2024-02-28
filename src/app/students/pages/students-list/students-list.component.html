@@ -1,0 +1,15 @@
+<mat-card class="main-card">
+  <h1>{{ "titles.students.list" | translate }}</h1>
+  <mat-card-content>
+    <button mat-raised-button color="accent" (click)="onAddNew()">
+      {{ "btn.add-new" | translate }}
+    </button>
+  </mat-card-content>
+  <br />
+  <mat-card-content>
+    <div *ngIf="list$ | async; let list">
+      <app-list-table [list]="list$" (details)="onDetails($event)">
+      </app-list-table>
+    </div>
+  </mat-card-content>
+</mat-card>

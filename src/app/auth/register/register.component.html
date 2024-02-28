@@ -1,0 +1,47 @@
+<div class="card-container">
+  <mat-card class="card">
+    <div class="mat-card-conent">
+      <img src="../../../assets/logo.jpg" class="logo" />
+      <form [formGroup]="refisterForm" (ngSubmit)="register()">
+        <mat-form-field class="full-width">
+          <mat-label>{{ "labels.email" | translate }}</mat-label>
+          <input matInput formControlName="email" />
+          <mat-error
+            *ngIf="this.refisterForm.controls.email.hasError('required')"
+          >
+            {{ "validation.field-required" | translate }}
+          </mat-error>
+          <mat-error *ngIf="this.refisterForm.controls.email.hasError('email')">
+            {{ "validation.bad-email" | translate }}
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <mat-label>{{ "labels.username" | translate }}</mat-label>
+          <input matInput formControlName="username" />
+          <mat-error
+            *ngIf="this.refisterForm.controls.username.hasError('required')"
+          >
+            {{ "validation.field-required" | translate }}
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <mat-label>{{ "labels.password" | translate }}</mat-label>
+          <input
+            matInput
+            placeholder="password"
+            required
+            formControlName="password"
+          />
+          <mat-error
+            *ngIf="this.refisterForm.controls.password.hasError('required')"
+          >
+            {{ "validation.field-required" | translate }}
+          </mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="sumit">
+          {{ "btn.register" | translate }}
+        </button>
+      </form>
+    </div>
+  </mat-card>
+</div>

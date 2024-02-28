@@ -1,0 +1,64 @@
+<form [formGroup]="studentForm" (ngSubmit)="onSave()">
+  <mat-form-field class="full-width">
+    <mat-label>{{ "labels.firstname" | translate }}</mat-label>
+    <input matInput formControlName="firstName" />
+    <mat-error *ngIf="this.studentForm.controls.firstName.hasError('required')">
+      {{ "validation.field-required" | translate }}
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <mat-label>{{ "labels.lastname" | translate }}</mat-label>
+    <input matInput formControlName="lastName" />
+    <mat-error *ngIf="this.studentForm.controls.lastName.hasError('required')">
+      {{ "validation.field-required" | translate }}
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <mat-label>{{ "labels.phone" | translate }}</mat-label>
+    <input matInput formControlName="phone" />
+    <mat-error *ngIf="this.studentForm.controls.phone.hasError('required')">
+      {{ "validation.field-required" | translate }}
+    </mat-error>
+    <mat-error *ngIf="this.studentForm.controls.phone.hasError('minLength')">
+      "zła liczba zanków"
+    </mat-error>
+    <mat-error *ngIf="this.studentForm.controls.phone.hasError('maxLength')">
+      "zła liczba zanków"
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <mat-label>{{ "labels.school" | translate }}</mat-label>
+    <input matInput formControlName="school" />
+    <mat-error *ngIf="this.studentForm.controls.school.hasError('required')">
+      {{ "validation.field-required" | translate }}
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <mat-label>{{ "labels.parent" | translate }}</mat-label>
+    <input matInput formControlName="parent" />
+    <mat-error *ngIf="this.studentForm.controls.parent.hasError('required')">
+      {{ "validation.field-required" | translate }}
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <mat-label>{{ "labels.email" | translate }}</mat-label>
+    <input matInput formControlName="email" />
+    <mat-error *ngIf="this.studentForm.controls.email.hasError('required')">
+      {{ "validation.field-required" | translate }}
+    </mat-error>
+    <mat-error *ngIf="this.studentForm.controls.email.hasError('email')">
+      {{ "validation.bad-email" | translate }}
+    </mat-error>
+  </mat-form-field>
+  <br />
+  <br />
+  <button mat-raised-button color="primary" type="submit">
+    {{ "btn.save" | translate }}
+  </button>
+</form>
+<br />

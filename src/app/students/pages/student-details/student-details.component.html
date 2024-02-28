@@ -1,0 +1,9 @@
+<mat-card class="main-card">
+  <h1>{{ "titles.student.details" | translate }}</h1>
+
+  <mat-card-content>
+    <div *ngIf="userObj$ | async; let userObj">
+      <app-details [userObj$]="userObj$"></app-details>
+    </div>
+  </mat-card-content>
+</mat-card>

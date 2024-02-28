@@ -1,0 +1,18 @@
+.card-container {
+  max-width: 350px;
+  margin: auto;
+}
+
+.full-width {
+  display: block;
+}
+.card {
+  background-color: #f7f7f7;
+  padding: 1em;
+  margin: 2rem 0;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+button {
+  margin-right: 1rem;
+}

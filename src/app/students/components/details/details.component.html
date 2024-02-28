@@ -1,0 +1,31 @@
+<p *ngIf="userObj.firstName">
+  <label class="bold">{{ "labels.firstname" | translate }}: </label>
+  {{ userObj.firstName }}
+</p>
+<p *ngIf="userObj.lastName">
+  <label class="bold">{{ "labels.lastname" | translate }}: </label>
+  {{ userObj.lastName }}
+</p>
+<p *ngIf="userObj.phone">
+  <label class="bold">{{ "labels.phone" | translate }}: </label>
+  {{ userObj.phone }}
+</p>
+<p *ngIf="userObj.email">
+  <label class="bold">{{ "labels.email" | translate }}: </label>
+  {{ userObj.email }}
+</p>
+<p *ngIf="userObj.school">
+  <label class="bold">{{ "labels.school" | translate }}: </label>
+  {{ userObj.school }}
+</p>
+<p *ngIf="userObj.parent">
+  <label class="bold">{{ "labels.parent" | translate }}: </label>
+  {{ userObj.parent }}
+</p>
+
+<mat-card-actions>
+  <button mat-flat-button color="primary" (click)="goToEditPage()">
+    edytuj
+  </button>
+  <button mat-flat-button color="accent" (click)="deteleStudent()">usuń</button>
+</mat-card-actions>

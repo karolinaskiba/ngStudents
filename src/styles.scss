@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  max-height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.main-card {
+  margin: clamp(1rem, 2.5vw, 2rem);
+  padding: clamp(1rem, 2.5vw, 2rem);
+}

@@ -1,0 +1,12 @@
+<mat-card class="main-card">
+  <h1>{{ "titles.student.edit" | translate }}</h1>
+
+  <mat-card-content>
+    <div *ngIf="userObj$ | async; let userObj">
+      <app-edit-form
+        [userObj$]="userObj$"
+        (edit)="onEdit($event)"
+      ></app-edit-form>
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,42 @@
+{
+  "btn": {
+    "yes": "tak",
+    "add-new": "dodaj nowego",
+    "add": "dodaj",
+    "edit": "edycja",
+    "login": "zaloguj się",
+    "register": "zarejestruj się",
+    "delete": "Usuń",
+    "save": "zapisz"
+  },
+  "labels": {
+    "firstname": "Imię",
+    "lastname": "Nazwisko",
+    "phone": "Telefon",
+    "email": "Email",
+    "school": "Szkoła",
+    "parent": "Rodzic",
+    "username": "Login",
+    "password": "Hasło"
+  },
+  "titles": {
+    "students": {
+      "list": "Lista uczniów"
+    },
+    "student": {
+      "add": "Dodawanie nowego ucznia",
+      "details": "Szczegóły ucznia",
+      "edit": "Edycja ucznia"
+    }
+  },
+  "validation": {
+    "field-required": "Pole wymagane",
+    "field-incorrect-length": "Nieprawidłowa liczba znaków",
+    "bad-email": "Nieprawidłowy adres email"
+  },
+  "nav": {
+    "students": "uczniowie",
+    "home": "strona główna",
+    "add-new": "dodaj nowego ucznia"
+  }
+}
